@@ -20,16 +20,16 @@ const app = {
             //Idem pour Size.
             console.log(`Extensions: ${ext.join(', ')}`);
             console.log(`Size: ${size} bytes`);
-            
-            } catch (error) {
-                console.log(error);
+
+        } catch (error) {
+            console.log(error);
         }
     },
 
     //Fonction asynchrone qui permet de lire le contenu d'un répertoire de façon récursive afin de récupérer les extensions et la taille totale de son contenu.
     async getExtAndSize(folderPath) {
 
-            try {
+        try {
             //J'initialise des variables dans lesquelles je vais stocker par la suite les extensions et la taille totale.
             let totalSize = 0; // la taille initiale est 0.
             let exts = new Set(); //new Set() permet de créer un nouveau 'set objet' dans lequel on peut stocker un ensemble de valeurs uniques telles que des primitives ou des objets.
@@ -74,8 +74,8 @@ const app = {
             }
             return { ext: [...exts], size: totalSize };
 
-            } catch (error) {
-                console.log(error);
+        } catch (error) {
+            console.log(error);
         }
     }
 }
